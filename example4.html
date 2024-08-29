@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SVG Animation Project - Example 4</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Example 4: Animating with JavaScript</h1>
+
+    <svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+      <circle id="js-circle" cx="100" cy="300" r="50" fill="purple" />
+    </svg>
+
+    <h2>Code:</h2>
+    <pre><code>
+&lt;svg width="800" height="600" xmlns="http://www.w3.org/2000/svg"&gt;
+    &lt;circle id="js-circle" cx="100" cy="300" r="50" fill="purple" /&gt;
+&lt;/svg&gt;
+
+&lt;script&gt;
+    // JavaScript animation using requestAnimationFrame
+    const circle = document.getElementById('js-circle');
+    let position = 100;
+    let direction = 1;
+
+    function animate() {
+        position += 2 * direction;
+        if (position &gt; 700 || position &lt; 100) {
+            direction *= -1;
+        }
+        circle.setAttribute('cx', position);
+        requestAnimationFrame(animate);
+    }
+
+    animate();
+&lt;/script&gt;
+    </code></pre>
+
+    <p><a href="index.html">Back to Menu</a></p>
+
+    <script src="example4.js"></script>
+  </body>
+</html>

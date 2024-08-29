@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Animation Project - Example 3</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="example3.css">
+</head>
+<body>
+    <h1>Example 3: Animating with CSS</h1>
+
+    <svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="100" cy="100" r="50" fill="green" class="animated-circle" />
+        <rect x="200" y="100" width="200" height="100" fill="blue" class="hover-rect" />
+    </svg>
+
+    <h2>Code:</h2>
+    <pre><code>
+&lt;svg width="800" height="600" xmlns="http://www.w3.org/2000/svg"&gt;
+    &lt;circle cx="100" cy="100" r="50" fill="green" class="animated-circle" /&gt;
+    &lt;rect x="200" y="100" width="200" height="100" fill="blue" class="hover-rect" /&gt;
+&lt;/svg&gt;
+
+&lt;style&gt;
+/* Circle Animation: Continuous scaling */
+.animated-circle {
+    transform-origin: center;
+    animation: scaleCircle 2s infinite alternate;
+}
+
+@keyframes scaleCircle {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.5);
+    }
+}
+
+/* Rectangle Hover Effect: Color change */
+.hover-rect {
+    transition: fill 0.3s;
+}
+
+.hover-rect:hover {
+    fill: red;
+}
+&lt;/style&gt;
+    </code></pre>
+
+    <p><a href="index.html">Back to Menu</a></p>
+</body>
+</html>

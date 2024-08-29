@@ -1,0 +1,22 @@
+.animated-circle {
+  transform-origin: center;
+  animation: scaleCircle 2s infinite alternate;
+}
+
+@keyframes scaleCircle {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.5);
+  }
+}
+
+/* Rectangle Hover Effect: Color change */
+.hover-rect {
+  transition: fill 0.3s;
+}
+
+.hover-rect:hover {
+  fill: red;
+}

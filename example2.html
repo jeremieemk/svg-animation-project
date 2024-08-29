@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SVG Animation Project - Example 2</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Example 2: Grouping Elements</h1>
+
+    <svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+      <!-- Grouping the rectangle and text -->
+      <g>
+        <rect x="50" y="50" width="200" height="100" fill="blue" />
+        <text x="75" y="115" font-family="Verdana" font-size="24" fill="white">
+          Button
+        </text>
+      </g>
+
+      <!-- Grouping the circle and line -->
+      <g transform="translate(0, 100)">
+        <circle cx="400" cy="100" r="50" fill="green" />
+        <line
+          x1="100"
+          y1="300"
+          x2="700"
+          y2="300"
+          stroke="red"
+          stroke-width="4"
+        />
+      </g>
+
+      <!-- A Triangle -->
+      <polygon points="400,350 450,450 350,450" fill="purple" />
+    </svg>
+
+    <h2>Code:</h2>
+    <pre><code>
+&lt;svg width="800" height="600" xmlns="http://www.w3.org/2000/svg"&gt;
+    &lt;g&gt;
+        &lt;rect x="50" y="50" width="200" height="100" fill="blue" /&gt;
+        &lt;text x="75" y="115" font-family="Verdana" font-size="24" fill="white"&gt;Button&lt;/text&gt;
+    &lt;/g&gt;
+    &lt;g transform="translate(0, 100)"&gt;
+        &lt;circle cx="400" cy="100" r="50" fill="green" /&gt;
+        &lt;line x1="100" y1="300" x2="700" y2="300" stroke="red" stroke-width="4" /&gt;
+    &lt;/g&gt;
+    &lt;polygon points="400,350 450,450 350,450" fill="purple" /&gt;
+&lt;/svg&gt;
+    </code></pre>
+
+    <p><a href="index.html">Back to Menu</a></p>
+  </body>
+</html>
